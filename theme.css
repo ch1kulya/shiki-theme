@@ -1,13 +1,30 @@
 @import url("https://fonts.googleapis.com/css2?family=TikTok+Sans:opsz,wght@12..36,500..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap");
 
-:root {
-    --font-main: "TikTok Sans", sans-serif;
-    --font-alt: "TikTok Sans", sans-serif;
+@media all {
+    :root {
+        --font-main: "TikTok Sans", sans-serif;
+        --font-alt: "TikTok Sans", sans-serif;
+    }
 }
 
-body {
+html[data-color-mode="light"] {
+    --icon-color: #000000;
+    --link-color: #000000;
+    --link-hover-color: #8fabd4;
+    --link-active-color: #4a70a9;
+    --link-border-color: rgba(#000000, 0.3);
+    --link-border-hover-color: rgba(#8fabd4, 0.3);
+    --link-border-active-color: rgba(#4a70a9, 0.3);
+    --headline-color: #000000;
+    --headline-background-color: #efece3;
+    --headline-border-color: #8fabd4;
+}
+
+body,
+.l-page {
     background-image: none;
+    background-color: var(--headline-background-color);
 }
 
 .headline,
@@ -15,6 +32,7 @@ body {
 .subheadline {
     font-family: "Unbounded", sans-serif;
     background-color: transparent;
+    border-left-width: 3px;
     & > a::before {
         font-family: inherit;
         font-size: 1.5rem;
