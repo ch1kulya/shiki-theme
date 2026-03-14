@@ -30,14 +30,18 @@ body,
 
 img,
 .poster {
-    border-radius: 3px;
+    filter: drop-shadow(2px 2px var(--icon-color));
+    border: 0.5px solid var(--icon-color);
     overflow: hidden;
 }
 
 .b-news_wall-topic .poster,
 .b-catalog_entry-tooltip .entry-tooltip_container .image-link img,
-.b-image img {
-    border-radius: 6px;
+.b-image img,
+.b-image,
+.b-catalog_entry .cover .image-decor {
+    filter: drop-shadow(4px 4px var(--icon-color));
+    border: 1px solid var(--icon-color);
     overflow: hidden;
 }
 
@@ -150,4 +154,21 @@ img,
         rgba(255, 255, 255, 0),
         var(--hover-color)
     );
+}
+
+.b-anime_status_tag,
+.b-link_button,
+.tag-link {
+    -webkit-filter: brightness(0.95) sepia(25%);
+    filter: brightness(0.95) sepia(25%);
+}
+
+.magenta,
+.red,
+.blue,
+.green,
+.orange,
+.skyblue {
+    color: var(--headline-color);
+    border-left-color: var(--headline-border-color);
 }
