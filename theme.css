@@ -29,25 +29,20 @@ body,
 }
 
 img,
-.poster {
+.b-news_wall-topic .poster .b-shiki_swiper,
+.b-catalog_entry .cover .image-decor,
+.b-image:not(.no-zoom) {
     filter: drop-shadow(2px 2px var(--icon-color));
-    border: 0.5px solid var(--icon-color);
-    overflow: hidden;
-}
-
-.b-news_wall-topic .poster,
-.b-catalog_entry-tooltip .entry-tooltip_container .image-link img,
-.b-image img,
-.b-image,
-.b-catalog_entry .cover .image-decor {
-    filter: drop-shadow(4px 4px var(--icon-color));
-    border: 1px solid var(--icon-color);
-    overflow: hidden;
 }
 
 .headline,
 .midheadline,
-.subheadline {
+.subheadline,
+.b-reviews_navigation .navigation-node-all,
+.b-reviews_navigation .navigation-node-positive,
+.b-reviews_navigation .navigation-node-neutral,
+.b-reviews_navigation .navigation-node-negative,
+.b-reviews_navigation .navigation-node.is-active {
     font-family: "Unbounded", sans-serif;
     background-color: transparent;
     border-left-width: 3px;
@@ -168,7 +163,29 @@ img,
 .blue,
 .green,
 .orange,
-.skyblue {
+.skyblue,
+.p-dashboards-show .v2 .headline.magenta a {
     color: var(--headline-color);
     border-left-color: var(--headline-border-color);
+}
+
+.p-dashboards-show .top-reviews-grid .review-card.rank-1,
+.p-dashboards-show .top-reviews-grid .review-card.rank-2,
+.p-dashboards-show .top-reviews-grid .review-card.rank-3 {
+    background-color: var(--headline-background-color);
+}
+
+.b-review-topic.is-review_review_author_details
+    > .inner
+    .review-info
+    .opinion.negative,
+.b-review-topic.is-review_review_author_details
+    > .inner
+    .review-info
+    .opinion.positive,
+.b-review-topic.is-review_review_author_details
+    > .inner
+    .review-info
+    .opinion.neutral {
+    background: none;
 }
